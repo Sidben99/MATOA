@@ -1,0 +1,193 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="style.css")
+    link(rel="stylesheet" , href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" , media="all") 
+    title Document
+  body 
+    header
+      .container  
+        nav 
+          .logo
+            img(src="Img/Logo/Logo Black.png", alt="logo" )
+          label #[i.fas.fa-bars] 
+          ul.pages 
+            -let arr = ["Watches","Eyewear","Accessoire","News"]
+            each val in arr 
+              li #[a(href=`#${val}`)= val]
+          ul.login
+            li #[i.fas.fa-search] 
+            li 
+              p #[i.fas.fa-user] Log In
+            li 
+              .circle #[i.fas.fa-shopping-bag]
+        .hero-section
+          img(src="Img/image 6.png", alt="")
+          .content 
+            h1 WAY KAMBAS MINI EBONY 
+            p MATOA Way Kambas - This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect on its strap to represent Rhino's skin.
+            a(href="#" class="discover") discover 
+            form 
+              button.main-btn #[i.fas.fa-shopping-cart] add to cart 
+              button.secondary-btn #[img(src="Img/Asset 759hdpi.png", alt="")]
+          form 
+            button.main-btn #[i.fas.fa-chevron-left]
+            button.secondary-btn #[i.fas.fa-chevron-right]
+    main 
+      section.sales 
+        .container 
+          mixin sales (title , paragraph , img) 
+            .card
+              h3= title 
+              p= paragraph
+              .card-bottom  
+                a(href="#" class="discover") discover now
+                picture  
+                  img(src=`${img}`, alt="")
+          +sales("Luxurious Eyewear","See the beauty of exotic world with the luxurious glasses","Img/image 7.png")
+          +sales("Comfortable Watches","Feels the balancing function and beauty in our wooden watches","Img/image 8.png")
+      section.monthly-deals 
+        .container 
+          h2.section-title #[span Monthly ] Deals  
+          .wrapper 
+            mixin deals (title , discount, originalP , currentP , img)
+              .deal 
+                img(src=`Img/${img}`, alt="img")
+                h4= title 
+                p= discount 
+                p= originalP 
+                h4= currentP
+                form 
+                  button.secondary-btn #[i(class="far fa-heart")]
+                  button.main-btn add to cart 
+            +deals("Singo Maple","20% Off","Rp 1.500.000","Rp 1.264.000","Mask Group (1).png")
+            +deals("Singo Ebony","20% Off","Rp 1.500.000","Rp 1.264.000","Mask Group (2).png")
+            +deals("Rakai Ebony","20% Off","Rp 1.500.000","Rp 1.264.000","Mask Group (3).png")
+            +deals("Way Kambas Mini Maple","20% Off","Rp 1.500.000","Rp 1.264.000","Mask Group.png")
+      section.recent-news
+        .bg 
+        .container
+          h2.section-title #[span Recent ] News
+          .wrapper 
+            .content 
+              p Where To Travel 
+              h2 Matoa Where To Travel? Yogyakarta 
+              form 
+                button.secondary-btn Discover
+            picture 
+              img(src="Img/Mask Group (4).png", alt="")
+      section.series 
+        .container
+          .grid-container 
+            mixin serie (title )
+              -let word = title.slice(0,3)
+              -let rest = title.slice(3)
+                h2.section-title #[span=word]#[span= rest]
+            mixin watch ( category,img , title ,currentP , originalP)
+              .watch 
+                picture.bg-watch
+                  img(src=`Img/${category}/${img}`, alt="img")
+                .content 
+                  h4= title
+                  p= originalP 
+                  h4= currentP
+            .wrapper 
+              +serie("Maple Series") 
+              +watch("Maple Series","image 15.png","Way Kambas Maple","Rp 1.280.000")
+              +watch("Maple Series","image 16.png","Tomia Ebony","Rp 950.000")
+              +watch("Maple Series","image 21.png","Sunda","Rp 1.170.000")
+            .wrapper 
+              +serie("Ebony Series")
+              +watch("Ebony Series","image 20.png","Tomia Ebony","Rp 960.000","Rp 1.280.000")
+              +watch("Ebony Series","image 22.png","Mori","Rp 950.000")
+              +watch("Ebony Series","image 23.png","Alor","Rp 1.170.000")
+            .wrapper 
+              +serie("Featured") 
+              +watch("Featured","image 17.png","Sikka (Ebony & Maple)","Rp 1.198.000")
+              +watch("Featured","image 18.png","Lore Walnut","Rp 1.280.000")
+              +watch("Featured","image 19.png","Way Kambas Limited Edition","Rp 1.170.000")
+          form 
+            button.secondary-btn see more 
+      section.testimonial
+        .bg 
+        .container
+          
+          .wrapper 
+            .content 
+              h2.section-title #[span testim]onial 
+              p Loving my new KAILI watch from @matoa_id, the first ever Indonesian watch local brand that uses wood as their main material. Like any other Matoa products, KAILI is inspired by Indonesian heritage.
+              .name 
+                h4 Gita Savitri
+            picture 
+              img(src="Img/Mask Group (5).png", alt="")
+          form.arrows
+            button  #[i(class="fas fa-arrow-left")]
+            button  #[i(class="fas fa-arrow-right")]
+      section.gallery 
+        .container 
+          h2.section-title #[span Instag]ram 
+          .wrapper
+            picture 
+              img(src="Img/Instagram/Rectangle 38.png", alt="")
+            picture 
+              img(src="Img/Instagram/Rectangle 39.png", alt="")
+            picture 
+              img(src="Img/Instagram/Rectangle 40.png", alt="")
+            picture 
+              img(src="Img/Instagram/Rectangle 41.png", alt="")
+            picture 
+              img(src="Img/Instagram/Rectangle 42.png", alt="")
+    footer 
+      section.top 
+        .container 
+          -for (let i=25 ; i < 37 ; i++)
+            -if(i === 30 || i === 31) continue;
+            picture
+              img(src=`Img/Logos/image ${i}.png`, alt=`image ${i}`)
+      section.bottom 
+        .container 
+          ul.infos 
+            .logo 
+              img(src="Img/Logo/image 30.png", alt="logo" )
+            .adress 
+              h5 adress 
+              p Store & Office Jl. Setrasari Kulon III, No. 10-12, Sukarasa, Sukasari, Bandung, Jawa Barat, Indonesia 40152 
+            .office 
+              h5 Office Hour 
+              p Monday - Sunday #[br] 10.00 - 18.00
+          .get-in-touch
+            h4 Get in touch 
+            .phone 
+              h5 phone 
+              p 022-20277564 
+            .service-center 
+              h5 service center 
+              p 0811-233-8899 
+            .customer-service 
+              h5 customer service
+              p 0811-235-9988
+          mixin links (c,l1,l2,l3,l4,l5,l6,l7)
+            -let cls = c.split(" ").join("-")
+            div(class=`${cls}`)
+              h4= c
+              ul(class=`${cls}`)
+                li #[a(href="#")= l1] 
+                li #[a(href="#")= l2] 
+                li #[a(href="#")= l3] 
+                li #[a(href="#")= l4] 
+                li #[a(href="#")= l5] 
+                li #[a(href="#")= l6] 
+                li #[a(href="#")= l7] 
+          +links("Useful Link","Warranty & Complaints","Order & Shipping","Tracking Order","About Us","repair","terms","FAQ")
+          +links("Campaign","Mengenal Arti Cukup","Tell Your Difference","Waykambas","Rebrand","Gallery","Singo","Rakaiss")
+          
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+.section-title{
+
+  margin-bottom: 50px;
+  span{
+    font-size: inherit;
+    border-bottom: 1px solid black;
+    display: in;
+  }
+}
+
+.main-btn{
+  background-color: $main-color;
+  color: white;
+  border: 3px solid $main-color;
+}
+.secondary-btn{
+  background-color: transparent;
+  color: $main-color;
+  border: 3px solid $main-color;
+}
+
+.discover{
+  color: $dark-color;
+  border-bottom: 1px solid black;
+  display: inline-block;
+  margin: 25px 0;
+}
+.bg{
+  position: absolute;
+  z-index: -1;
+  width: 50%;
+  height: 450px;
+  background-color: $bg-color;
+  top: 0;
+  right: 0;
+  @media screen and (max-width: 770px){
+    display: none;
+  }
+}
