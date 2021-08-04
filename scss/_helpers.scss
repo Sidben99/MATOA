@@ -1,0 +1,70 @@
+
+//variables  
+
+$main-color:#D84727;
+$dark-color:#1D293F;
+$text-color:#7C8087;
+$bg-color:#F2DDCA;
+$bg-color-2:#E5E5E5;
+$base-size:16;
+$ratio:1.5;
+
+@media screen and (max-width: 767px){
+  $base-size:13.5 !global;
+}
+
+
+// mixins 
+
+@mixin flex ($direction : row , $justify : space-between , $align : center, $gap : 30px , $wrap : wrap){
+  display: flex;
+  flex-direction: #{$direction};
+  justify-content: #{$justify};
+  align-items: #{$align};
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+@mixin grid ($width-item : 250px,$row-gap : 30px,$column-gap:30px){
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax($width-item,1fr));
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+}
+
+
+
+
+button{
+  font-size: 20px;
+}
+
+
+body{
+  $base-size:16;
+$ratio:1.3;
+  @media screen and (max-width: 767px){
+    $base-size:14;
+    
+  }
+  p,a,span{
+    font-size:#{$base-size}px;
+    line-height: $ratio;
+}
+  @for $i from 4 through 1{
+    $base-size : $base-size * $ratio;
+    h#{$i} {
+        font-size : #{$base-size}px;
+        line-height: 1.15;
+    }
+}
+
+}
+
+
+// placehoders
+
+
+
+
+
+
