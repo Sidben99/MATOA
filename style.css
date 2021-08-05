@@ -474,6 +474,7 @@ main section.gallery .container .wrapper picture img {
   max-width: 100%;
 }
 
+/* The Start of The Footer */
 footer {
   margin-top: 75px;
 }
@@ -532,4 +533,6 @@ footer section.bottom .container ul li {
 }
 footer section.bottom .container ul a {
   color: white;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* The end of The Footer *//*# sourceMappingURL=style.css.map */
