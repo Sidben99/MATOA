@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@400;600&display=swap');
+@import "../scss/_helpers";
+@import "../scss/compontents";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Taviraj" , "sans-serif";
+}
+body{
+  background-color: rgba($bg-color-2 , 0.35);
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+}
+.row{
+  @include flex();
+}
+
+/* start header */ 
+
+header {
+  .container{
+    /* start nav */
+    nav{
+      @include flex();
+      padding: 40px 0;
+      label{
+        font-size: 40px;
+        display: none;
+        @media screen and (max-width:990px){
+          display:block;
+        }
+      }
+      ul{
+        @media screen and (max-width: 990px){
+          display:none;
+        }
+        @include flex($gap:20px);
+        font-size:20px;
+        li{
+          p{font-size:20px;
+            cursor: pointer;
+          i{
+            margin-right: 10px;
+          }
+          }
+        }
+        
+        a{
+          color: $dark-color;
+          font-size:20px;
+          transition: color 0.3s;
+          &:hover{
+            color: $main-color;
+          }
+        }
+        
+      }
+      ul.login{
+        @media screen and (max-width: 990px){
+          display:none;
+        }
+        @include flex($gap:45px);
+
+        li:last-child{
+          .circle{
+            @include flex($justify:center);
+            width:45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: $bg-color;
+
+          }
+        }
+      }
+    }
+
+    /*end nav */
+    .hero-section {
+      padding: 75px 175px 75px 0;
+      background-color: $bg-color;
+      position: relative;
+      @include flex($justify:flex-start);
+      @media screen and (max-width: 990px){
+        padding-left: 30px;
+      }
+      @media screen and (max-width: 767px) {
+        padding-right: 30px;
+      }
+      & > img{
+        margin-bottom: -200px;
+        @media screen and (max-width:990px){
+          display: none;
+        }
+      }
+      .content{
+        flex: 1 1 400px;
+        form{
+          @include flex($justify:flex-start);
+          
+          button{
+            height: 62px;
+          }
+          .main-btn{
+            width: 208px;
+            
+          }
+          .secondary-btn{
+            width: 140px;
+            line-height: 70px;
+          }
+        }
+        
+      }
+      & > form{
+        position: absolute;
+        bottom: 0;
+        right: 30px;
+        transform: translateY(50%);
+        button{
+          width: 60px;
+          height: 60px;
+          i{
+            font-size: 30px;
+          }
+        }
+      }
+    }
+
+  }
+}
+/* end header */
+
+/* start the main content */ 
+main{
+  .progress{
+    padding: 75px 0;
+    max-width: 725px;
+    margin: auto;
+    @include flex($wrap:no-wrap);
+    a{
+      color:rgba(black , 0.5);
+      text-align: center;
+      &:visited:active{
+      color: $main-color;
+      }
+      i{
+        font-size: 30px;
+        display: block;
+        margin-bottom: 20px;
+      }
+      
+    }
+  }
+  .wrapper{
+    @include flex($align:flex-start);
+    & > div{
+      background-color: white;
+      padding: 50px 30px;
+      flex: 1 1 300px;
+      @media screen and (max-width : 767px){
+        padding: 25px 10px;
+      }
+    }
+    .detail-order{
+      ul{
+        padding: 50px 0;
+        border-bottom: 1px solid black;
+        li{
+          margin-bottom: 10px;
+          opacity: 0.7;
+        }
+      }
+      .row{
+        margin-top: 30px;
+      }
+    }
+    .personal-info{
+      .billing-address{
+        form{
+          margin: 50px 0;
+          & > *{
+            display: block;
+            width: 100%;
+          }
+          input,select{
+            margin-bottom: 20px;
+            padding: 10px;
+          }
+          
+        }
+      }
+      & > form{
+        @include flex();
+        & > *{
+          flex: 1 1 200px;
+          height: 60px;
+          font-size: 20px;
+        }
+        
+      }
+    }
+    
+  }
+}
+/* the end of the main content */ 
+
+/* The Start of The Footer */ 
+footer{
+  margin-top: 75px;
+  section.top{
+    background-color: rgba($main-color , 0.8);
+    .container{
+      @include grid($width-item:180px);
+      justify-items: center;
+      picture{
+        
+        img{
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  section.bottom {
+    padding:50px 0 75px 0;
+    background-color: $main-color;
+    color: white;
+    .container {
+      .infos{
+        .adress{
+          margin: 10px 0 20px 0;
+        }
+      }
+      h4{
+        margin-bottom: 20px;
+      }
+      h5{
+        margin-bottom: 10px;
+      }
+      @include flex($align:flex-start , $gap: 50px);
+      & > *{
+        flex: 1 1 200px;
+      }
+      .get-in-touch{
+        div{
+          @include flex();
+        }
+      }
+      ul{
+        flex: 1 1 150px;
+        li{
+          margin-bottom: 10px;
+        }
+        a{
+          color: white;
+        }
+      } 
+    }
+  }
+}
+
+/* The end of The Footer */ 

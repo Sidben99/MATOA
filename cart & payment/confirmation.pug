@@ -1,0 +1,39 @@
+extends cart.pug
+block cartStyle 
+  link(rel="stylesheet", href="confirmation.css")
+block progressOnly
+  .wrapper 
+    .order-confirmation 
+      picture 
+        img(src="../Img/undraw_completing_6bhr 1.png", alt="undraw_completing_6bhr 1.png")
+      .info 
+        h3 Order Confirmed 
+        p Your order have been confirmed, please wait and track your order 
+      form 
+        button.main-btn Go to track page 
+    .bill 
+      .row 
+        p #[i(class="far fa-clock")] 10 days delivery 
+        p #[i(class="fas fa-truck-moving")] DHL Express 
+      .infos 
+        h4 Way Kambas Mini Ebony
+        p 2 x IDR 1.024.000
+        h4 Sikka (Ebony & Mapple)
+        p 1 x IDR 1.264.000
+      .sums 
+        mixin rows (title , price)
+          .row 
+            h3= title 
+            h3= price 
+        +rows("Subtotal","Rp 2.152.000")
+        +rows("Shipping Cost","Rp 500.000")
+        +rows("Packaging","Rp 50.000")
+      .total 
+        .row 
+          h4 Grand total 
+          h2 Rp 2.702.000
+      .shipping-adress 
+        .row 
+          h4 Shipping adress
+          h4 18 Richardson Drive Fountain Valley, CA 92708
+

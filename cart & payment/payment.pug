@@ -1,0 +1,66 @@
+extends cart.pug
+block cartStyle 
+  link(rel="stylesheet", href="payment.css")
+block cartContent 
+  .order-payment 
+    h2 Order Detail
+    mixin row (title1 , title2)
+      .row 
+        h4= title1 
+        h4= title2 
+    .row 
+      h4 Order Number
+      .info 
+        h4 MTAWEB-3A86D4DB #[span COPY] 
+        p Always remember Order Number for easy tracking 
+    +row("Purchase Date ","2019-11-07 14:01:48")
+    .row 
+      h4 Items 
+      .info 
+        h4 Way Kambas Mini Ebony 
+        p 2 x IDR 1.024.000 
+        h4 Sikka (Ebony & Mapple) 
+        p 1 x IDR 1.264.000 
+    +row("Name","Rasyidin Arsyad Nasution")
+    +row("Phone","+18911188899") 
+    +row("Email","rasyid.arsyad@gmail.com ") 
+    +row("Shipping Address","18 Richardson Drive Fountain Valley, CA 92708")  
+  .payment-details 
+    .row 
+      h2 Payment Detail
+      h4 11:55:55
+    p Please make a payment according with the limit time specified, starting from now
+  .payment-method
+    h2 Payment Method 
+    form.payment-wrapper 
+      mixin bank (lable , img)
+        .column 
+          .row #[input(type="radio" name="bank")] #[label= lable]
+          picture #[img(src=`../Img/Banks/${img}`)]
+      +bank("BNI Cicilan 0%","image 46.png")
+      +bank("Mandiri Cicilan 0%","image 38.png")
+      +bank("Bank Transfer","image 45.png")
+      .column 
+        .row #[input(type="radio" name="bank")] #[label Credit Card]
+        .row 
+          picture #[img(src="../Img/Banks/image 44.png")]
+          picture #[img(src="../Img/Banks/image 37.png")]
+      .column 
+        .row #[input(type="radio" name="bank")] #[label Credit Card Cicilan 0% (Danamon, UOB & Standard Chartered)]
+        .row 
+          picture #[img(src="../Img/Banks/image 43.png")]
+          picture #[img(src="../Img/Banks/image 40.png")]
+          picture #[img(src="../Img/Banks/image 42.png")]
+      +bank("GO-PAY","image 41.png")
+      +bank("Krdivo","image 39.png")
+  form.btn 
+    button.main-btn Proceed Payment
+      
+
+
+
+
+
+
+
+

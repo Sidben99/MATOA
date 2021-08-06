@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Taviraj:wght@400;600&display=swap");
+button {
+  font-size: 20px;
+}
+
+body p, body a, body span {
+  font-size: 14px;
+  line-height: 1.3;
+}
+body h4 {
+  font-size: 18.2px;
+  line-height: 1.15;
+}
+body h3 {
+  font-size: 23.66px;
+  line-height: 1.15;
+}
+body h2 {
+  font-size: 30.758px;
+  line-height: 1.15;
+}
+body h1 {
+  font-size: 39.9854px;
+  line-height: 1.15;
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
+.section-title span {
+  font-size: inherit;
+  border-bottom: 1px solid black;
+  display: in;
+}
+
+.main-btn {
+  background-color: #D84727;
+  color: white;
+  border: 3px solid #D84727;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #D84727;
+  border: 3px solid #D84727;
+}
+
+.discover {
+  color: #1D293F;
+  border-bottom: 1px solid black;
+  display: inline-block;
+  margin: 25px 0;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  width: 50%;
+  height: 450px;
+  background-color: #F2DDCA;
+  top: 0;
+  right: 0;
+}
+@media screen and (max-width: 770px) {
+  .bg {
+    display: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Taviraj", "sans-serif";
+}
+
+body {
+  background-color: rgba(229, 229, 229, 0.35);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* start header */
+header .container {
+  /* start nav */
+}
+header .container nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+header .container nav label {
+  font-size: 40px;
+  display: none;
+}
+@media screen and (max-width: 990px) {
+  header .container nav label {
+    display: block;
+  }
+}
+header .container nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+@media screen and (max-width: 990px) {
+  header .container nav ul {
+    display: none;
+  }
+}
+header .container nav ul li p {
+  font-size: 20px;
+  cursor: pointer;
+}
+header .container nav ul li p i {
+  margin-right: 10px;
+}
+header .container nav ul a {
+  color: #1D293F;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+header .container nav ul a:hover {
+  color: #D84727;
+}
+header .container nav ul.login {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 45px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 990px) {
+  header .container nav ul.login {
+    display: none;
+  }
+}
+header .container nav ul.login li:last-child .circle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #F2DDCA;
+}
+
+/* the end of header */
+main .container .progress {
+  padding: 75px 0;
+  max-width: 725px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: no-wrap;
+}
+main .container .progress a {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+main .container .progress a:visited:active {
+  color: #D84727;
+}
+main .container .progress a i {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 20px;
+}
+main .wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 30px;
+}
+main .wrapper > div {
+  background-color: white;
+  padding: 50px 30px;
+}
+main .wrapper .order-confirmation picture {
+  width: 360px;
+  margin: auto;
+  display: block;
+}
+main .wrapper .order-confirmation picture img {
+  max-width: 100%;
+}
+main .wrapper .order-confirmation .info {
+  margin: 40px auto;
+  max-width: 360px;
+  text-align: center;
+}
+main .wrapper .order-confirmation .info p {
+  margin-top: 20px;
+}
+main .wrapper .order-confirmation form {
+  max-width: 360px;
+  margin: auto;
+}
+main .wrapper .order-confirmation form button {
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+}
+main .wrapper .bill > .row {
+  justify-content: flex-start;
+}
+main .wrapper .bill .infos {
+  margin: 40px 0;
+}
+main .wrapper .bill .infos h4 {
+  margin: 10px 0;
+}
+main .wrapper .bill .sums h3 {
+  margin-bottom: 20px;
+}
+main .wrapper .bill .total {
+  padding: 20px 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+main .wrapper .bill .shipping-adress {
+  margin-top: 20px;
+}
+main .wrapper .bill .shipping-adress .row {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+main .wrapper .bill .shipping-adress .row h4:last-child {
+  flex: 1 1 200px;
+  line-height: 1.5;
+}
+
+/* The Start of The Footer */
+footer {
+  margin-top: 75px;
+}
+footer section.top {
+  background-color: rgba(216, 71, 39, 0.8);
+}
+footer section.top .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 30px;
+  justify-items: center;
+}
+footer section.top .container picture img {
+  max-width: 100%;
+}
+footer section.bottom {
+  padding: 50px 0 75px 0;
+  background-color: #D84727;
+  color: white;
+}
+footer section.bottom .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+footer section.bottom .container .infos .adress {
+  margin: 10px 0 20px 0;
+}
+footer section.bottom .container h4 {
+  margin-bottom: 20px;
+}
+footer section.bottom .container h5 {
+  margin-bottom: 10px;
+}
+footer section.bottom .container > * {
+  flex: 1 1 200px;
+}
+footer section.bottom .container .get-in-touch div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+footer section.bottom .container ul {
+  flex: 1 1 150px;
+}
+footer section.bottom .container ul li {
+  margin-bottom: 10px;
+}
+footer section.bottom .container ul a {
+  color: white;
+}
+
+/* The end of The Footer *//*# sourceMappingURL=confirmation.css.map */
