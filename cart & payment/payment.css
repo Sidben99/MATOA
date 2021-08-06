@@ -67,6 +67,233 @@ body h1 {
   }
 }
 
+/* start header */
+header .container {
+  /* start nav */
+  /*end nav */
+}
+header .container nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+header .container nav #check {
+  display: none;
+}
+header .container nav #check:checked ~ ul {
+  right: 0;
+}
+header .container nav label {
+  font-size: 40px;
+  display: none;
+  z-index: 100;
+}
+@media screen and (max-width: 990px) {
+  header .container nav label {
+    display: block;
+  }
+}
+header .container nav ul {
+  transition: 0.3s;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+@media screen and (max-width: 990px) {
+  header .container nav ul {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(216, 71, 39, 0.8);
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 200px 0;
+  }
+}
+header .container nav ul li p {
+  font-size: 20px;
+  cursor: pointer;
+}
+header .container nav ul li p i {
+  margin-right: 10px;
+}
+header .container nav ul a {
+  color: #1D293F;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+@media screen and (max-width: 990px) {
+  header .container nav ul a {
+    color: white;
+  }
+}
+header .container nav ul a:hover {
+  color: #D84727;
+}
+header .container nav ul.login {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 45px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 990px) {
+  header .container nav ul.login {
+    display: none;
+  }
+}
+header .container nav ul.login li:last-child .circle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #F2DDCA;
+}
+header .container .hero-section {
+  padding: 75px 175px 75px 0;
+  background-color: #F2DDCA;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 990px) {
+  header .container .hero-section {
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .container .hero-section {
+    padding-right: 30px;
+  }
+}
+header .container .hero-section > img {
+  margin-bottom: -200px;
+}
+@media screen and (max-width: 990px) {
+  header .container .hero-section > img {
+    display: none;
+  }
+}
+header .container .hero-section .content {
+  flex: 1 1 400px;
+}
+header .container .hero-section .content form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+header .container .hero-section .content form button {
+  height: 62px;
+}
+header .container .hero-section .content form .main-btn {
+  width: 208px;
+}
+header .container .hero-section .content form .secondary-btn {
+  width: 140px;
+  line-height: 70px;
+}
+header .container .hero-section > form {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  transform: translateY(50%);
+}
+header .container .hero-section > form button {
+  width: 60px;
+  height: 60px;
+}
+header .container .hero-section > form button i {
+  font-size: 30px;
+}
+
+/* end header */
+/* The Start of The Footer */
+footer {
+  margin-top: 75px;
+}
+footer section.top {
+  background-color: rgba(216, 71, 39, 0.8);
+}
+footer section.top .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 30px;
+  justify-items: center;
+}
+footer section.top .container picture img {
+  max-width: 100%;
+}
+footer section.bottom {
+  padding: 50px 0 75px 0;
+  background-color: #D84727;
+  color: white;
+}
+footer section.bottom .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+footer section.bottom .container .infos .adress {
+  margin: 10px 0 20px 0;
+}
+footer section.bottom .container h4 {
+  margin-bottom: 20px;
+}
+footer section.bottom .container h5 {
+  margin-bottom: 10px;
+}
+footer section.bottom .container > * {
+  flex: 1 1 200px;
+}
+footer section.bottom .container .get-in-touch div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+footer section.bottom .container ul {
+  flex: 1 1 150px;
+}
+footer section.bottom .container ul li {
+  margin-bottom: 10px;
+}
+footer section.bottom .container ul a {
+  color: white;
+}
+
+/* The end of The Footer */
 * {
   margin: 0;
   padding: 0;
@@ -101,84 +328,6 @@ a {
   flex-wrap: wrap;
 }
 
-/* start header */
-header .container {
-  /* start nav */
-}
-header .container nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  padding: 40px 0;
-}
-header .container nav label {
-  font-size: 40px;
-  display: none;
-}
-@media screen and (max-width: 990px) {
-  header .container nav label {
-    display: block;
-  }
-}
-header .container nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  font-size: 20px;
-}
-@media screen and (max-width: 990px) {
-  header .container nav ul {
-    display: none;
-  }
-}
-header .container nav ul li p {
-  font-size: 20px;
-  cursor: pointer;
-}
-header .container nav ul li p i {
-  margin-right: 10px;
-}
-header .container nav ul a {
-  color: #1D293F;
-  font-size: 20px;
-  transition: color 0.3s;
-}
-header .container nav ul a:hover {
-  color: #D84727;
-}
-header .container nav ul.login {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 45px;
-  flex-wrap: wrap;
-}
-@media screen and (max-width: 990px) {
-  header .container nav ul.login {
-    display: none;
-  }
-}
-header .container nav ul.login li:last-child .circle {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: #F2DDCA;
-}
-
-/* the end of header */
 main .container .progress {
   padding: 75px 0;
   max-width: 725px;
@@ -308,67 +457,4 @@ main form.btn button {
   width: 250px;
   height: 60px;
   font-size: 20px;
-}
-
-/* The Start of The Footer */
-footer {
-  margin-top: 75px;
-}
-footer section.top {
-  background-color: rgba(216, 71, 39, 0.8);
-}
-footer section.top .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  -moz-column-gap: 30px;
-       column-gap: 30px;
-  row-gap: 30px;
-  justify-items: center;
-}
-footer section.top .container picture img {
-  max-width: 100%;
-}
-footer section.bottom {
-  padding: 50px 0 75px 0;
-  background-color: #D84727;
-  color: white;
-}
-footer section.bottom .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-footer section.bottom .container .infos .adress {
-  margin: 10px 0 20px 0;
-}
-footer section.bottom .container h4 {
-  margin-bottom: 20px;
-}
-footer section.bottom .container h5 {
-  margin-bottom: 10px;
-}
-footer section.bottom .container > * {
-  flex: 1 1 200px;
-}
-footer section.bottom .container .get-in-touch div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-footer section.bottom .container ul {
-  flex: 1 1 150px;
-}
-footer section.bottom .container ul li {
-  margin-bottom: 10px;
-}
-footer section.bottom .container ul a {
-  color: white;
-}
-
-/* The end of The Footer *//*# sourceMappingURL=payment.css.map */
+}/*# sourceMappingURL=payment.css.map */
