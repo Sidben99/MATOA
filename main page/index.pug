@@ -7,14 +7,15 @@ html(lang="en")
     block styleLink 
       link(rel="stylesheet", href="style.css")
     link(rel="stylesheet" , href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" , media="all") 
-    title Document
+    title MATOA
   body 
     header
       .container  
         nav 
           .logo
             img(src="../Img/Logo/Logo Black.png", alt="logo" )
-          label #[i.fas.fa-bars] 
+          input(type="checkbox" id="check")
+          label(for="check") #[i.fas.fa-bars]
           ul.pages 
             -let arr = ["Watches","Eyewear","Accessoire","News"]
             each val in arr 

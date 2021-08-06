@@ -1,0 +1,67 @@
+extends ../main page/index.pug
+block styleLink
+    link(rel="stylesheet", href="detail.css")
+    link(rel="stylesheet", href="../main page/style.css")
+block hero 
+    .chooseModel
+        .container
+            .watches
+                .model
+                    img(src="../Img/Maple Series/image 21.png", alt="")
+                    img(src="../Img/Maple Series/image 21.png", alt="")
+                    img(src="../Img/Maple Series/image 16.png", alt="")
+                    img(src="../Img/Maple Series/image 15.png", alt="")
+                .imageBox
+                    img(src="../Img/image 6.png", alt="")
+            .content 
+                h1 WAY KAMBAS MINI EBONY
+                p Rp 1.280.000
+                h4 Rp 1.002.400 
+                span Chosse Model
+                .circleBox
+                    .circleModel
+                    .circleModel
+                    
+                form
+                    .howManyBuy
+                        span -
+                        span 1
+                        span +
+                    button.main-btn #[i.fas.fa-shopping-cart] add to cart 
+                    button.secondary-btn #[img(src="../Img/Asset 759hdpi.png", alt="")]
+block mainContent
+    section.aboutProduct
+        .container
+            ul.detail
+                -var array = ["Detail","Warranty","Custom Engrave","How to Adjust","How to Care","Gallery"]
+                each val in array
+                    li=val
+            .description
+                h4 Material
+                p MATOA Way Kambas - Sumatran Rhino comes with a material form of Makassar Ebony (Diospyros celebica). This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect on its strap to represent Rhino's skin. Sumatran Rhino has unique skin fold, the skin is fairly thin about 10-16mm, and is soft and pliable.
+                h4 Case
+                p The case on this timepiece is made with Height 12.5mm, Width 36mm, Length 33mm and Dial Opening 25mm. The glass is equipped with K1 flat glass to increase the enhanced durability on timepieces as scratch resistant and anti fingerprint. This timepiece is also equipped with Hand Polish Brass Spacer for a longer usage periods.
+                h4 Movement
+                p For the first time, MATOA comes with Seiko Quartz VD78 movement with small second function. A small second hand is above 6 o'clock position. This second hand dial is dedicated to Sumatran Rhino whom every second of its life is so precious because whenever Sumatran Rhino goes, it can be threatened by illegal poaching
+                h4 Dial
+                p In the dial, there are double layer of Makassar Ebony Veneer with 3, 9 & 12 o'clock laser cut brass plate index.
+                h4 hand
+                p The hour, minute & small second hands on MATOA Way Kambas - Sumatran Rhino is outfitted with skeleton hand and brush finished with Gold Matte color. This new design aims at adding a value for this special edition.
+                h4 Important to Note
+                p Wood color on watches is produced from a combination of mature and fresh wood but should not be viewed as a defect. It is a very natural process of wood aging.
+                img(src="../Img/image 40.png", alt="")    
+    section.relateProducts
+        .container
+            h2.section-title #[span Rolate ] Products
+            .wrapper 
+                mixin relate(title, originalP , currentP , img)
+                    .relate 
+                        img(src=`../Img/${img}`, alt="img")
+                        h4= title  
+                        p= originalP 
+                        h4= currentP
+                +relate("Singo Maple","Rp 1.500.000","Rp 1.264.000","Mask Group (1).png")
+                +relate("Singo Ebony","Rp 1.500.000","Rp 1.264.000","Mask Group (2).png")
+                +relate("Rakai Ebony","Rp 1.500.000","Rp 1.264.000","Mask Group (3).png")
+                +relate("Way Kambas Mini Maple","Rp 1.500.000","Rp 1.264.000","Mask Group.png")
+                   
