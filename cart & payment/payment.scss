@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@400;600&display=swap');
 @import "../scss/_helpers";
 @import "../scss/compontents";
-
+@import "../scss/header\ &\ footer";
 *{
   margin: 0;
   padding: 0;
@@ -28,67 +28,7 @@ a{
   @include flex();
 }
 
-/* start header */ 
 
-header {
-  .container{
-    /* start nav */
-    nav{
-      @include flex();
-      padding: 40px 0;
-      label{
-        font-size: 40px;
-        display: none;
-        @media screen and (max-width:990px){
-          display:block;
-        }
-      }
-      ul{
-        @media screen and (max-width: 990px){
-          display:none;
-        }
-        @include flex($gap:20px);
-        font-size:20px;
-        li{
-          p{font-size:20px;
-            cursor: pointer;
-          i{
-            margin-right: 10px;
-          }
-          }
-        }
-        
-        a{
-          color: $dark-color;
-          font-size:20px;
-          transition: color 0.3s;
-          &:hover{
-            color: $main-color;
-          }
-        }
-        
-      }
-      ul.login{
-        @media screen and (max-width: 990px){
-          display:none;
-        }
-        @include flex($gap:45px);
-
-        li:last-child{
-          .circle{
-            @include flex($justify:center);
-            width:45px;
-            height: 45px;
-            border-radius: 50%;
-            background-color: $bg-color;
-
-          }
-        }
-      }
-    }
-  }
-}
-/* the end of header */ 
 main{
   .container{
     .progress{
@@ -218,58 +158,3 @@ main{
     }
   }
 }
-/* The Start of The Footer */ 
-footer{
-  margin-top: 75px;
-  section.top{
-    background-color: rgba($main-color , 0.8);
-    .container{
-      @include grid($width-item:180px);
-      justify-items: center;
-      picture{
-        
-        img{
-          max-width: 100%;
-        }
-      }
-    }
-  }
-  section.bottom {
-    padding:50px 0 75px 0;
-    background-color: $main-color;
-    color: white;
-    .container {
-      .infos{
-        .adress{
-          margin: 10px 0 20px 0;
-        }
-      }
-      h4{
-        margin-bottom: 20px;
-      }
-      h5{
-        margin-bottom: 10px;
-      }
-      @include flex($align:flex-start , $gap: 50px);
-      & > *{
-        flex: 1 1 200px;
-      }
-      .get-in-touch{
-        div{
-          @include flex();
-        }
-      }
-      ul{
-        flex: 1 1 150px;
-        li{
-          margin-bottom: 10px;
-        }
-        a{
-          color: white;
-        }
-      } 
-    }
-  }
-}
-
-/* The end of The Footer */ 
